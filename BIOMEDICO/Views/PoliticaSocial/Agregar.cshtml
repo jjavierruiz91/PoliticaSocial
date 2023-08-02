@@ -12,6 +12,7 @@
 
 }
 <link href="~/Content/css/layout.css" rel="stylesheet" />
+
 <script defer src="~/Scripts/APP/PoliticaSocial/PoliticaSocial.js"></script>
 @*<div class="contenedor">
         <img src="~/images/243273c3-c4d6-41ce-9586-fa874800842d.png" alt="Descripción de la imagen" width="320" height="200">
@@ -120,6 +121,14 @@
                 </select>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">
+                <label><strong>Rol <span style="color: red;"> *</span></strong> </label>
+                <select style="border: black; border-width: 1px; border-style: solid;" class="select2 form-control" id="RolPoliticaSocial" name="RolPoliticaSocial">
+                    <option value="">Seleccionar</option>
+                    <option value="Persona Mayor">Persona Mayor</option>
+                    <option value="Cuidador">Cuidador</option>
+                </select>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
                 <label><strong>Sexo Nacimiento <span style="color: red;"> *</span></strong> </label>
                 <select style="border: black; border-width: 1px; border-style: solid;" class="select2 form-control" id="SexoNacimiento" name="SexoNacimiento">
                     <option value="">Seleccionar</option>
@@ -216,11 +225,18 @@
                     <option value="Ninguno">Ninguno</option>
                 </select>
             </div>
-
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <label><strong>Correo electrónico<span style="color: red;"> *</span></strong> </label>
-                <input style="border: black; border-width: 1px; border-style: solid;" class="form-control" id="CorreoElectronico" name="CorreoElectronico" placeholder="Digite su correo electronico" type="email" />
+                <input style="border: black; border-width: 1px; border-style: solid;" class="form-control" id="CorreoElectronico" name="CorreoElectronico" placeholder="Digite su correo electrónico" type="email" onchange="validarCorreo()" />
             </div>
+
+
+
+
+            @*<div class="col-xs-6 col-sm-6 col-md-6">
+                    <label><strong>Correo electrónico<span style="color: red;"> *</span></strong> </label>
+                    <input style="border: black; border-width: 1px; border-style: solid;" class="form-control" id="CorreoElectronico" name="CorreoElectronico" placeholder="Digite su correo electronico" type="email" />
+                </div>*@
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <label><strong>Telefono / Celular <span style="color: red;"> *</span></strong> </label>
                 <input style="border: black; border-width: 1px; border-style: solid;" type="number" class="form-control" id="TelefonoContacto" name="TelefonoContacto" placeholder="Digite su numero de celular" />
@@ -505,6 +521,9 @@
             inputAmbiente.style.display = "none";
         }
     }
+
+
+
 
 </script>
 

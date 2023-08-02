@@ -116,6 +116,7 @@
           <Property Name="AmbienteLudicoCorporal" Type="varchar(max)" />
           <Property Name="FechaRegistro" Type="datetime" />
           <Property Name="TipoSangre" Type="varchar(max)" />
+          <Property Name="RolPoliticaSocial" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -470,6 +471,7 @@
           <Property Name="AmbienteLudicoCorporal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
           <Property Name="TipoSangre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RolPoliticaSocial" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -610,6 +612,7 @@
           <EntitySetMapping Name="PoliticaSocial">
             <EntityTypeMapping TypeName="BIOMEDICOModel.PoliticaSocial">
               <MappingFragment StoreEntitySet="PoliticaSocial">
+                <ScalarProperty Name="RolPoliticaSocial" ColumnName="RolPoliticaSocial" />
                 <ScalarProperty Name="TipoSangre" ColumnName="TipoSangre" />
                 <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
                 <ScalarProperty Name="AmbienteLudicoCorporal" ColumnName="AmbienteLudicoCorporal" />

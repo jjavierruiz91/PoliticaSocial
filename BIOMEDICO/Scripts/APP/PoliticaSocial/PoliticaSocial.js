@@ -205,6 +205,7 @@ function Createobj() {
                     FechaNacimiento: $('#FechaNacimiento').val(),
                     EdadPolitica: $('#EdadPolitica').val(),
                     TipoSangre: $('#TipoSangre').val(),
+                    RolPoliticaSocial: $('#RolPoliticaSocial').val(),
                     TipoDocumento: $('#TipoDocumento').val(),
                     NumeroDocumento: $('#NumeroDocumento').val(),
                     SexoNacimiento: $('#SexoNacimiento').val(),
@@ -223,6 +224,8 @@ function Createobj() {
                     AmbienteLudico: $('#pais').val(),
                     AmbienteLudicoExpresa: $('#ambienteLudico').val(),
                     AmbienteLudicoCorporal: $('#informacion').val(),
+                    
+                    
                     
 
        
@@ -326,3 +329,12 @@ function reloadPage() {
 
 //}
 
+
+function validarCorreo() {
+    var correoElectronico = document.getElementById("CorreoElectronico").value;
+    var expresionRegular = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!expresionRegular.test(correoElectronico)) {
+        alert("Por favor, ingrese un correo electrónico válido.");
+    }
+}

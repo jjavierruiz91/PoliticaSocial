@@ -39,5 +39,6 @@ namespace BIOMEDICO.Models
         public string AmbienteLudicoCorporal { get; set; }
         public Nullable<System.DateTime> FechaRegistro { get; set; }
         public string TipoSangre { get; set; }
+        public string RolPoliticaSocial { get; set; }
     }
 }
