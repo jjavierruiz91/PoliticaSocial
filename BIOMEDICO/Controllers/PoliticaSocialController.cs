@@ -58,8 +58,10 @@ namespace BIOMEDICO.Controllers
                 //});
 
             }
-
-            return Json(ret, JsonRequestBehavior.AllowGet);
+            var jsonResult = Json(ret, JsonRequestBehavior.AllowGet);
+            jsonResult.MaxJsonLength = int.MaxValue;
+            return jsonResult;
+            //return Json(ret, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]
         public JsonResult BuscarCedulaPass(long Identificacion)
